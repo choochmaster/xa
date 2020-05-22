@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="An amazing server!">
+<title>UprisenPvP</title>
+<link rel="stylesheet" href="assets/style.min.css">
+<link rel="stylesheet" href="../use.fontawesome.com/releases/v5.5.0/css/all.css">
+<link rel="shortcut icon" href="images/xa.png" type="image/vnd.microsoft.icon">
+<script type="c4c3c5daeda28007149dd35b-text/javascript">
+        let server_ip = "eu.hypixel.net"
+        let server_port = "25565"
+        let particle_color = "#ffffff"
+    </script>
+</head>
+<body>
+<div class="page">
+<div class="page-hover"></div>
+<div id="particles-js"></div>
+<div class="body-page">
+<div class="header-page">
+<img src="images/xa.png" alt="logo">
+</div>
+<div class="connect-button" id="copiazaIP">
+<p>Join <span class="player-count">0</span> players at <span id="server-ip">cocky.xyz</span></p>
+</div>
+<div class="buttons-page">
+<ul>
+<li><a href=http://localhost/premiumweb/ target="_self" class="false"><i class=""></i> Home</a></li><li><a href=https://google.com/ target="_self" class="false"><i class=""></i> Forum</a></li><li><a href=http://localhost/premiumweb/vote target="_self" class="false"><i class=""></i> Vote</a></li><li><a href=https://buycraft.net/ target="_self" class="false"><i class=""></i> Store</a></li><li><a href=http://localhost/premiumweb/servers target="_self" class="false"><i class=""></i> Servers</a></li> </ul>
+</div>
+<div class="social-page">
+<ul>
+<li><a href="index-2.html"><i class="fab fa-twitter"></i></a></li><li><a href="index-2.html"><i class="fab fa-youtube"></i></a></li><li><a href="index-2.html"><i class="fab fa-facebook"></i></a></li> </ul>
+</div>
+<footer class="page-footer">
+<p>© 2020 UprisenPvP, All Rights Reserved.<br><small>made with 💚 by <a href="http://cocky.xyz">ck dev</a>.</small></p>
+<a href="https://discord.gg/hzMJ9V8" style="display: block" class="copyright-footer"><img src="../cdn.discordapp.com/attachments/282810617880903680/687299755113709592/Group_1.png" style="width: 20px;"></a>
+</footer>
+<input type="text" id="ipServer" value="eu.hypixel.net" />
+</div>
+</div>
+<script src="../ajax.cloudflare.com/cdn-cgi/scripts/7089c43e/cloudflare-static/rocket-loader.min.js" data-cf-settings="c4c3c5daeda28007149dd35b-|49" defer=""></script></body>
+<script src="../ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js" type="c4c3c5daeda28007149dd35b-text/javascript"></script>
+<script src="../unpkg.com/sweetalert%402.1.2/dist/sweetalert.min.js" type="c4c3c5daeda28007149dd35b-text/javascript"></script>
+<script src="../cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js" type="c4c3c5daeda28007149dd35b-text/javascript"></script>
+<script type="c4c3c5daeda28007149dd35b-text/javascript">
+
+    $.getJSON('https://api.minetools.eu/ping/' + server_ip + "/" + server_port, function (status) {
+        var jucatoriOnline = status.players.online;
+        $(".player-count").html(((jucatoriOnline = jucatoriOnline.toString().split("."))[0] = jucatoriOnline[0].replace(/\B(?=(\d{3})+(?!\d))/g, ","), jucatoriOnline.join(".")));
+    });
+    $("#copiazaIP").click(function () {
+    swal({
+      title: "You copied the ip!",
+      text: "Come on our server and get fun",
+      icon: "success",
+      button: "Close",
+      timer: 150000
+    });
+    document.getElementById("ipServer").select(), document.execCommand("copy")
+  });    
+</script>
+<script type="c4c3c5daeda28007149dd35b-text/javascript">
+particlesJS("particles-js", {
+    "particles": {
+        "number": {
+            "value":80, "density": {
+                "enable": true, "value_area": 800
+            }
+        }
+        , "color": {
+            "value": particle_color
+        }
+        , "shape": {
+            "type":"circle", "stroke": {
+                "width": 0, "color": "#000000"
+            }
+            , "polygon": {
+                "nb_sides": 5
+            }
+            , "image": {
+                "src": "img/github.svg", "width": 100, "height": 100
+            }
+        }
+        , "opacity": {
+            "value":0.5, "random":false, "anim": {
+                "enable": false, "speed": 1, "opacity_min": 0.1, "sync": false
+            }
+        }
+        , "size": {
+            "value":3, "random":true, "anim": {
+                "enable": false, "speed": 40, "size_min": 0.1, "sync": false
+            }
+        }
+        , "line_linked": {
+            "enable": false, "distance": 150, "color": "#ffffff", "opacity": 0.4, "width": 1
+        }
+        , "move": {
+            "enable":true, "speed":6, "direction":"top", "random":false, "straight":false, "out_mode":"out", "bounce":false, "attract": {
+                "enable": false, "rotateX": 600, "rotateY": 1200
+            }
+        }
+    }
+    , "interactivity": {
+        "detect_on":"canvas", "events": {
+            "onhover": {
+                "enable": false, "mode": "repulse"
+            }
+            , "onclick": {
+                "enable": false, "mode": "push"
+            }
+            , "resize":true
+        }
+        , "modes": {
+            "grab": {
+                "distance":400, "line_linked": {
+                    "opacity": 1
+                }
+            }
+            , "bubble": {
+                "distance": 400, "size": 40, "duration": 2, "opacity": 8, "speed": 3
+            }
+            , "repulse": {
+                "distance": 200, "duration": 0.4
+            }
+            , "push": {
+                "particles_nb": 4
+            }
+            , "remove": {
+                "particles_nb": 2
+            }
+        }
+    }
+    , "retina_detect":true
+}
+);
+    
+    </script>
+
+</html>
